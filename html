@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoGuard - Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-card">
+        <header>
+            <div class="icon-shield">🛡️</div>
+            <h1>CryptoGuard</h1>
+            <p>Gere senhas de alta segurança instantaneamente</p>
+        </header>
+
+        <section class="display-container">
+            <input type="text" id="password-display" readonly value="Clique em Gerar">
+            <button id="btn-copy" title="Copiar senha">📋</button>
+        </section>
+
+        <main class="config-container">
+            <div class="control-group">
+                <label for="length-slider">Comprimento: <span id="length-val">12</span> caracteres</label>
+                <input type="range" id="length-slider" min="6" max="32" value="12">
+            </div>
+
+            <div class="checkbox-grid">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="chk-uppercase" checked>
+                    <span>Maiúsculas</span>
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="chk-lowercase" checked>
+                    <span>Minúsculas</span>
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="chk-numbers" checked>
+                    <span>Números</span>
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="chk-symbols">
+                    <span>Símbolos</span>
+                </label>
+            </div>
+
+            <div class="strength-meter">
+                <span>Força:</span>
+                <div class="meter-bar">
+                    <div id="strength-indicator" class="medium"></div>
+                </div>
+            </div>
+
+            <button id="btn-generate">Gerar Nova Senha</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
