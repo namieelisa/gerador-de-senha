@@ -1,0 +1,188 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top right, #2e0854, #0b0314);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Card Principal (Efeito Vidro / Glassmorphism) */
+.main-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-shield {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #a855f7;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+/* Área de Exibição da Senha */
+.display-container {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 25px;
+}
+
+#password-display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #22c55e;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#btn-copy {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+#btn-copy:hover {
+    opacity: 1;
+}
+
+/* Controles e Inputs */
+.config-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+#length-slider {
+    width: 100%;
+    accent-color: #a855f7;
+    cursor: pointer;
+}
+
+/* Grid de Seleção (Checkboxes) */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.custom-checkbox {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.custom-checkbox:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.custom-checkbox input {
+    accent-color: #a855f7;
+    width: 16px;
+    height: 16px;
+}
+
+/* Medidor de Força */
+.strength-meter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.meter-bar {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#strength-indicator {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Cores de Força dinâmicas */
+.weak { width: 33%; background-color: #ef4444; }
+.medium { width: 66%; background-color: #eab308; }
+.strong { width: 100%; background-color: #22c55e; }
+
+/* Botão de Ação */
+#btn-generate {
+    background: linear-gradient(135deg, #a855f7, #6366f1);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    transition: transform 0.1s, filter 0.2s;
+}
+
+#btn-generate:hover {
+    filter: brightness(1.1);
+}
+
+#btn-generate:active {
+    transform: scale(0.98);
+}
